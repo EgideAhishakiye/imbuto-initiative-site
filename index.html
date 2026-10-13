@@ -42,7 +42,7 @@ function showPage(name){if(!pageNames.includes(name))name='home';document.queryS
 function route(){showPage((location.hash||'#home').slice(1));}
 window.addEventListener('hashchange',route);document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const name=a.getAttribute('href').slice(1);if(pageNames.includes(name))showPage(name);}));
 document.getElementById('menuToggle').addEventListener('click',()=>{const n=document.getElementById('navLinks');const open=n.classList.toggle('open');document.getElementById('menuToggle').setAttribute('aria-expanded',String(open));});
-document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subject=encodeURIComponent('Imbuto Initiative — Collaboration enquiry');const body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\nMessage:\n'+d.get('interest'));window.location.href='mailto:REPLACE-WITH-OFFICIAL-EMAIL@example.org?subject='+subject+'&body='+body;});
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subject=encodeURIComponent('Imbuto Initiative — Collaboration enquiry');const body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\nMessage:\n'+d.get('interest'));window.location.href='mailto@gmail.com?subject='+subject+'&body='+body;
 document.getElementById('year').textContent=new Date().getFullYear();route();
 </script>
 </body></html>
